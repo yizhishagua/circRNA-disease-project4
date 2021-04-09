@@ -1,0 +1,7 @@
+install.packages("pROC")
+install.packages("ggplot2")
+library("pROC")
+library("ggplot2")
+setwd("d:\\work_directory")
+myData <- read.table("file_name", header = TRUE, sep = ',')
+roc(myData$label, myData$score, plot = TRUE, print.thres = TRUE, print.auc = TRUE)
